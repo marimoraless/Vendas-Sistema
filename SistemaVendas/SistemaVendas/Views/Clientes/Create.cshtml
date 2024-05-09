@@ -1,0 +1,62 @@
+﻿@model SistemaVendas.Models.Cliente
+
+@{
+    ViewData["Title"] = "Criar";
+}
+
+<div>
+            <div class="alert alert-info text-dark" role="alert">
+            <h2>Cadastro de Clientes</h2>
+        </div>
+ </div>
+
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NomeCliente" class="control-label"></label>
+                <input asp-for="NomeCliente" class="form-control" />
+                <span asp-validation-for="NomeCliente" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="SobrenomeCliente" class="control-label"></label>
+                <input asp-for="SobrenomeCliente" class="form-control" />
+                <span asp-validation-for="SobrenomeCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CPF" class="control-label"></label>
+                <input asp-for="CPF" class="form-control" />
+                <span asp-validation-for="CPF" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TelefoneCliente" class="control-label"></label>
+                <input asp-for="TelefoneCliente" class="form-control" />
+                <span asp-validation-for="TelefoneCliente" class="text-danger"></span>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 20px;">
+                <label asp-for="NivelAcesso" class="control-label"></label>
+                <input asp-for="NivelAcesso" class="form-control" />
+                <span asp-validation-for="NivelAcesso" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Criar" class="btn btn-outline-primary mr-2" /> |
+                <a asp-action="Index" class= "btn btn-outline-danger">Voltar</a> 
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

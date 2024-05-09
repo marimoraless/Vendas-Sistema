@@ -1,0 +1,48 @@
+﻿@model SistemaVendas.Models.Funcionario
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NomeFuncionario)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NomeFuncionario)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SobrenomeFuncionario)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SobrenomeFuncionario)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CPF)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CPF)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NivelAcesso)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NivelAcesso)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.FuncionarioID" class="btn btn-outline-primary">Editar</a> |
+    <a asp-action="Index" class="btn btn-outline-danger">Voltar</a>
+</div>
+

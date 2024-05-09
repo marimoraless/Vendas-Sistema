@@ -1,0 +1,46 @@
+﻿@model SistemaVendas.Models.Venda
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalhes</h1>
+
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ClienteID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ClienteID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ProdutoID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ProdutoID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FuncionárioID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FuncionárioID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Quantidade)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Quantidade)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TotalVenda)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TotalVenda)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model? VendasID" class="btn btn-outline-primary">Editar</a> |
+    <a asp-action="Index" class="btn btn-outline-danger">Voltar</a>
+</div>
